@@ -1,0 +1,1 @@
+<span data-action="colorbox">弹窗</span>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/js.js"></script> 
+</head>
+
+<body>
+	<div class="login_box pr">
+    	<img class="ml10" src="images/mall_login_logo.gif" width="262" height="82" />
+    	<form class="login_form" action="" method="">
+        	<div class="login_input_item clearfix pr">
+            	<i class="icon_login_user fl"></i>
+            	<input class="login_txt fl ml10 c_9" value="请填写用户名" type="text" name="username" autocomplete="off" >
+            </div> 
+            <div class="login_input_item clearfix pr mt15">
+            	<i class="icon_login_pwd fl"></i>
+            	<input class="login_txt fl ml10 c_9" type="password" id="password" name="password" autocomplete="off" >
+                <span class="login_txt_tishi pa c_9">请输入密码</span>
+            </div> 
+            <div class="login_input_item clearfix pr mt15">
+            	<i class="icon_login_code fl"></i>
+            	<input class="login_txt login_txt_code fl ml10 c_9" value="请填写验证码" type="text" name="username" autocomplete="off" >
+                <a class="change_code fl ft14 mt10" href="#">换一张？</a>
+            </div>
+            <div class="mt10"><img src="images/login_code.png" width="290" height="62"/></div> 
+            <input class="login_btn ft22 bold mt10" type="button" value="登录">  
+            <p class="red mt5">验证码错我</p>          
+        </form>
+    </div>
+    <script>
+		$(function(){
+			/* 登陆框获取焦点失去焦点*/
+			$('.login_txt_tishi').click(function(){
+			 	$(this).hide();
+				$('#password').focus();
+			})
+			$('#password').focus(function(){
+			 	$('.login_txt_tishi').hide();
+			})
+			
+			$(".login_txt").blur(function(){     //失去焦点 				   
+				if($(this).val()==""){   
+					$(this).val(this.defaultValue);
+					$(this).removeClass('c_3').addClass('c_9'); 
+					$(this).next('.login_txt_tishi').css({display:'block'});
+				}   
+			}).focus(function(){  //获取焦点				
+				if($(this).val()==this.defaultValue){   
+					$(this).val(""); 
+					$(this).removeClass('c_9').addClass('c_3');
+				}
+								   
+			}); 
+			
+		})
+	</script>
+</body>
+</html>

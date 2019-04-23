@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/js.js"></script> 
+</head>
+
+<body class="main_body">
+	<!-- 头部 -->
+	<div class="header clearfix">
+    	<span class="logo fl"></span>
+        <!-- 主导航 -->
+        <ul class="main_nav fl">
+        	<li class="main_current"><a href="#">首页</a></li>
+            <li><a href="#">内容</a></li>
+            <li><a href="#">用户</a></li>
+            <li><a href="#">系统</a></li>
+            <li><a href="#">扩展</a></li>
+        </ul>
+        <!-- /主导航 -->
+        
+        <!-- 用户栏 -->
+        <div class="user-bar fr">
+            <a class="user-entrance" href="javascript:;"><i class="icon-user"></i></a>
+            <ul class="nav-list user-menu dp_none">
+                <li class="manager">你好，<em title="admin">admin</em></li>
+                <li><a href="/admin.php?s=/User/updatePassword.html">修改密码</a></li>
+                <li><a href="/admin.php?s=/User/updateNickname.html">修改昵称</a></li>
+                <li><a href="/admin.php?s=/Public/logout.html">退出</a></li>
+            </ul>
+        </div>
+        <!-- /用户栏 -->
+    </div>
+    <!-- /头部 -->
+    
+    <!-- 左侧 -->
+	<div class="sidebar">
+    	<div class="subnav" id="subnav">
+        	<h3><i class="icon"></i>系统设置</h3>
+            <ul class="side-sub-menu">
+            	<li class="current"><a class="item" href="#">网站设置</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+            </ul>
+            <h3><i class="icon icon-fold"></i>数据备份</h3>
+            <ul class="side-sub-menu subnav-off">
+            	<li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /左侧 -->
+    
+    <!-- 主体部分 -->
+	<div class="main">
+    	<!-- 主体部分(内容) -->
+    	<div class="main_content">
+        	<div class="main-title">
+            	<h2>用户列表</h2>
+            </div>
+            <div class="clearfix">
+                <div class="fl">
+                    <a href="/admin.php?s=/User/add.html" class="btn">新 增</a>
+                    <button target-form="ids" url="#" class="btn ajax-post">启 用</button>
+                    <button target-form="ids" url="#" class="btn ajax-post">禁 用</button>
+                    <button target-form="ids" url="#" class="btn ajax-post confirm">删 除</button>
+                </div>
+        
+                <!-- 高级搜索 -->
+                <div class="search-form fr clearfix">
+                    <div class="sleft">
+                        <input type="text" placeholder="请输入用户昵称或者ID" value="" class="search-input" name="nickname">
+                        <a url="/admin.php?s=/User/index.html" id="search" href="javascript:;" class="sch-btn"><i class="btn-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-table table-striped">
+                <table class="">
+                <thead>
+                    <tr>
+                    <th class="row-selected row-selected"><input type="checkbox" class="check-all"></th>
+                    <th class="">UID</th>
+                    <th class="">昵称</th>
+                    <th class="">积分</th>
+                    <th class="">登录次数</th>
+                    <th class="">最后登录时间</th>
+                    <th class="">最后登录IP</th>
+                    <th class="">状态</th>
+                    <th class="">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" value="1" name="id[]" class="ids"></td>
+                        <td>1 </td>
+                        <td>admin</td>
+                        <td>20</td>
+                        <td>8</td>
+                        <td><span>2014-10-20 09:20</span></td>
+                        <td><span>127.0.0.1</span></td>
+                        <td>正常</td>
+                        <td><a class="ajax-get" href="#">禁用</a>
+                                           <a class="authorize" href="#">授权</a>
+                            <a class="confirm ajax-get" href="#">删除</a>
+                            </td>
+                     </tr>			
+                 </tbody>
+                </table>
+             </div>
+             <div class="page"><div> <a href="#" class="prev">&lt;&lt;</a> <a href="#" class="num">1</a><span class="current">2</span>   <span class="rows">共 11 条记录</span></div></div>
+        </div>
+        <!-- /主体部分(内容) -->     
+         
+        <!-- 主体部分(底部信息) -->
+        <div class="footer">
+            <div class="copyright clearfix">
+                <div class="fl">感谢使用 汉荣世纪 管理平台</div>
+                <div class="fr">V1.0.141008</div>
+            </div>
+        </div>
+        <!-- 主体部分(底部信息) -->    
+                       
+    </div>
+    <!-- /主体部分 -->  
+    
+    <script>
+		$(function(){
+			/* 主体部分高度设置 */
+			var w_hight=$(window).height();
+			$('.main_content').css({'min-height':w_hight-130})
+			
+			/* 左边菜单显示收起 */
+            $("#subnav").on("click", "h3", function(){
+                var $this = $(this);
+                $this.find(".icon").toggleClass("icon-fold");
+                $this.next().slideToggle("fast").siblings(".side-sub-menu:visible").
+                      prev("h3").find("i").addClass("icon-fold").end().end().hide();
+            });
+            $("#subnav h3 a").click(function(e){e.stopPropagation()});
+			
+			/* 头部管理员菜单 */
+            $(".user-bar").mouseenter(function(){
+                var userMenu = $(this).children(".user-menu ");
+                userMenu.removeClass("dp_none");
+                clearTimeout(userMenu.data("timeout"));
+            }).mouseleave(function(){
+                var userMenu = $(this).children(".user-menu");
+                userMenu.data("timeout") && clearTimeout(userMenu.data("timeout"));
+                userMenu.data("timeout", setTimeout(function(){userMenu.addClass("dp_none")}, 100));
+            });
+		})
+	</script>
+       
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/js.js"></script> 
+</head>
+
+<body class="main_body">
+	<!-- 头部 -->
+	<div class="header clearfix">
+    	<span class="logo fl"></span>
+        <!-- 主导航 -->
+        <ul class="main_nav fl">
+        	<li class="main_current"><a href="#">首页</a></li>
+            <li><a href="#">内容</a></li>
+            <li><a href="#">用户</a></li>
+            <li><a href="#">系统</a></li>
+            <li><a href="#">扩展</a></li>
+        </ul>
+        <!-- /主导航 -->
+        
+        <!-- 用户栏 -->
+        <div class="user-bar fr">
+            <a class="user-entrance" href="javascript:;"><i class="icon-user"></i></a>
+            <ul class="nav-list user-menu dp_none">
+                <li class="manager">你好，<em title="admin">admin</em></li>
+                <li><a href="/admin.php?s=/User/updatePassword.html">修改密码</a></li>
+                <li><a href="/admin.php?s=/User/updateNickname.html">修改昵称</a></li>
+                <li><a href="/admin.php?s=/Public/logout.html">退出</a></li>
+            </ul>
+        </div>
+        <!-- /用户栏 -->
+    </div>
+    <!-- /头部 -->
+    
+    <!-- 左侧 -->
+	<div class="sidebar">
+    	<div class="subnav" id="subnav">
+        	<h3><i class="icon"></i>系统设置</h3>
+            <ul class="side-sub-menu">
+            	<li class="current"><a class="item" href="#">网站设置</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+            </ul>
+            <h3><i class="icon icon-fold"></i>数据备份</h3>
+            <ul class="side-sub-menu subnav-off">
+            	<li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+                <li><a class="item" href="#">分类管理</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /左侧 -->
+    
+    <!-- 主体部分 -->
+	<div class="main">
+    	<!-- 主体部分(内容) -->
+    	<div class="main_content">
+        	<div class="main-title">
+            	<h2>添加用户</h2>
+            </div>
+            
+            <form class="form-horizontal" method="post" action="/admin.php?s=/User/add.html">
+                <div class="form-item">
+                    <label class="item-label">用户名<span class="check-tips">（用户名会作为默认的昵称）</span></label>
+                    <div class="controls">
+                        <input type="text" value="" name="username" class="text input-large">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">密码<span class="check-tips">（用户密码不能少于6位）</span></label>
+                    <div class="controls">
+                        <input type="password" value="" name="password" class="text input-large">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">确认密码</label>
+                    <div class="controls">
+                        <input type="password" value="" name="repassword" class="text input-large">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">邮箱<span class="check-tips">（用户邮箱，用于找回密码等安全操作）</span></label>
+                    <div class="controls">
+                        <input type="text" value="" name="email" class="text input-large">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">是否开启<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <select name="config[OPEN_DRAFTBOX]">
+                            <option value="0">关闭草稿功能</option><option selected="" value="1">开启草稿功能</option>			
+                        </select>				
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">是否影藏<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <label class="radio"><input type="radio" value="1" name="hide" class="">是</label>
+                        <label class="radio"><input type="radio" value="0" name="hide">否</label>
+                    </div>
+                </div>
+                
+                <div class="form-item">
+                    <button target-form="form-horizontal" type="submit" id="submit" class="btn submit-btn ajax-post">确 定</button>
+                    <button onclick="javascript:history.back(-1);return false;" class="btn btn-return">返 回</button>
+                </div>
+            </form>
+            
+            
+        </div>
+        <!-- /主体部分(内容) -->     
+         
+        <!-- 主体部分(底部信息) -->
+        <div class="footer">
+            <div class="copyright clearfix">
+                <div class="fl">感谢使用 汉荣世纪 管理平台</div>
+                <div class="fr">V1.0.141008</div>
+            </div>
+        </div>
+        <!-- 主体部分(底部信息) -->    
+                       
+    </div>
+    <!-- /主体部分 -->  
+    
+    <script>
+		$(function(){
+			/* 主体部分高度设置 */
+			var w_hight=$(window).height();
+			$('.main_content').css({'min-height':w_hight-130})
+			
+			/* 左边菜单显示收起 */
+            $("#subnav").on("click", "h3", function(){
+                var $this = $(this);
+                $this.find(".icon").toggleClass("icon-fold");
+                $this.next().slideToggle("fast").siblings(".side-sub-menu:visible").
+                      prev("h3").find("i").addClass("icon-fold").end().end().hide();
+            });
+            $("#subnav h3 a").click(function(e){e.stopPropagation()});
+			
+			/* 头部管理员菜单 */
+            $(".user-bar").mouseenter(function(){
+                var userMenu = $(this).children(".user-menu ");
+                userMenu.removeClass("dp_none");
+                clearTimeout(userMenu.data("timeout"));
+            }).mouseleave(function(){
+                var userMenu = $(this).children(".user-menu");
+                userMenu.data("timeout") && clearTimeout(userMenu.data("timeout"));
+                userMenu.data("timeout", setTimeout(function(){userMenu.addClass("dp_none")}, 100));
+            });
+		})
+	</script>
+       
+</body>
+</html>

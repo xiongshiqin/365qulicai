@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成员管理</title>
+  <link href="../css/style.css" rel="stylesheet"> 
+  <link href="../css/admin.css" rel="stylesheet"> 
+ </head>
+ <body>
+<!--顶部-->
+<div id="header">
+	<div id="top">
+		<div class="right">
+			<a href="" class="btn_login">登录</a>
+			<a href="" class="btn_login btn_regis">注册</a>
+		</div>
+
+		<div class="left">
+			<span>
+				<a href="" style="float:left;">深圳</a>
+				<i class="arrow"></i>
+			</span>
+			<a href="">收藏本站</a>
+		</div>
+	</div>
+</div>
+
+<!--导航-->
+<div id="nav">
+	<!--主导航-->
+	<div class="mainbav">
+		<div class="left logo">
+			<a href=""><img alt="钱包密码" src="images/logo1.jpg" /></a>
+		</div>
+		
+		<ul class="nav_right">
+			<li><a href="">首页</a></li>
+			<li class="selected"><a href="">P2P理财</a></li>
+			<li><a href="">信用卡</a></li>
+			<li><a href="">优惠活动</a></li>
+			<li><a href="">小组</a></li>
+			<li><a href="">同城聚会</a></li>
+			<li><a href="">我的钱包</a></li>
+		</ul>
+	</div>
+
+	<!--子导航-->
+	<div class="subnav_bg">
+		<ul class="subnav">
+			<li class="selected"><a href="">P2P优惠活动</a></li>
+			<li><a href="">信用卡优惠活动</a></li>
+			<li><a href="">我的优惠</a></li>
+		</ul>
+	</div>
+</div>
+
+<!--内容区-->
+<div id="wrap">
+	<div class="contentL">
+		<div class="sideL">
+			<!--后台管理-->
+			<dl class="block backstage">
+				<dt>后台管理</dt>
+				<dd><a href="">管理首页</a></dd>
+				<dd><a href="">发标播报</a></dd>
+				<dd><a href="">新闻/公告</a></dd>
+				<dd class="selected"><a href="">活动</a></dd>
+				<dd><a href="">自助图片/广告</a></dd>
+				<dd><a href="">宣传视频</a></dd>
+				<dd><a href="">宣传相册</a></dd>
+				<dd><a href="">基本信息</a></dd>
+				<dd><a href="">客服人员</a></dd>
+				<dd><a href="">会员</a></dd>
+				<dd><a href="">员工</a></dd>
+				<dd><a href="">联系我们</a></dd>
+			</dl>
+		</div>
+
+		<div class="mainarea">
+			<!--莱单-->
+			<div class="block menu_btn menu_btn1">
+				<a class="selected"  href="">客服列表</a>		
+				<a href="">添加客服</a>		
+			</div>
+			
+
+			<!--活动设置-->
+			<div class="block fatie">
+				<form class="backstage_input" id="form1" name="form1" method="post" action="">
+					<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="activities_title" colspan="8" style="padding-left:15px;">活动：开业庆典----百万现金大放送！送完即止！</td>
+						</tr>
+						<tr>
+							<th>关注时间：</th>
+							<td>
+								<input style="width:170px;" type="text" name="textfield" id="textfield" />&nbsp;&nbsp;至&nbsp;
+								<input style="width:170px;" type="text" name="textfield" id="textfield" /><span>&nbsp;&nbsp;不填写表示不限时间</span> 
+							</td>
+						</tr>
+						<tr>
+							<th>邀请人数：</th>
+							<td>
+								<input style="width:130px;" type="text" name="textfield" id="textfield" />&nbsp;&nbsp;人到&nbsp;
+								<input style="width:130px;" type="text" name="textfield" id="textfield" /><span>&nbsp;&nbsp;不填写表示不限人数</span> 
+
+							</td>
+						</tr>
+						<tr>
+							<th>发奖品：</th>
+							<td>
+								<input style="width:14px; height:14px; border:0;" checked="checked" id="" type="radio" value="" name="radio" />
+								<label>不限</label>
+								<input style="width:14px; height:14px; border:0;" id="" type="radio" value="" name="radio" />
+								<label>己发奖品</label>
+								<input style="width:14px; height:14px; border:0;" id="" type="radio" value="" name="radio" />
+								<label>未发奖品</label>
+							</td>
+						</tr>
+						<tr>
+							<th>Vip：</th>
+							<td>
+								<input style="width:14px; height:14px; border:0;" checked="checked" id="" type="radio" value="" name="radio" />
+								<label>是</label>
+								<input style="width:14px; height:14px; border:0;" id="" type="radio" value="" name="radio" />
+								<label>否</label>
+							</td>
+						</tr>
+						<tr>
+							<th>用户名称：</th>
+							<td class="quote">
+								<input style="text" name="textfield" id="textfield" />
+								<input class="btn_blue" type="submit" name="button" id="button" value="确&nbsp;&nbsp;&nbsp;&nbsp;定" />
+							</td>
+						</tr>
+					</table>
+					<div class="clearboth"></div>
+				</form>
+			</div>
+
+			<!--管理页面-->
+			<div class="block backstage_table">
+				<form class="" id="form1" name="form1" method="post" action="">
+					<table class="hudong_table" width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th class="title" colspan="8">奖品发放</th>
+						</tr>
+						<tr>
+							<th width="14%">
+								<input type="checkbox" name="checkbox" id="checkbox" />
+								<label for="checkbox">编号</label>
+							</th>
+							<th width="17%">名称</th>
+							<th width="17%">平台关联帐号</th>
+							<th>邀请人数</th>
+							<th>关注时间</th>
+							<th>是否VIP</th>
+							<th>奖励</th>
+							<th>操作</th>
+						</tr>
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">Vip 取消</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang">己发</td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">Vip 取消</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">Vip 取消</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">设为Vip</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">设为Vip</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">设为Vip</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">设为Vip</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+
+						<tr class="aa">
+							<td>
+								<input type="checkbox" name="checkbox1" id="checkbox1" />
+								<label for="checkbox1">第12314名</label>
+							</td>
+							<td>花花</td>
+							<td>汉荣鼎盛帐号</td>
+							<td>3人</td>
+							<td>2014-12-02</td>
+							<td class="quote"><a href="">设为Vip</a></td>
+							<td>
+								<select id="select" name="select">
+									<option>月饼一盒</option>
+									<option>一箱很好吃的葡萄</option>
+									<option>红酒一瓶</option>
+								</select>
+							</td>
+							<td class="fafang"><a href="">发放</a></td>
+						</tr>
+						<tr>
+							<td class="huodong_td grey" colspan="8">
+							已发奖励：充值卡10元<a href=""><img src="../images/fork.png" /></a>
+							iphone一部<a href=""><img src="../images/fork.png" /></a>
+							</td>
+						</tr>
+					</table>
+
+					<!--分页-->
+					<div class="pages" style="padding-left:13px;">
+						<ul class="pagelist">
+							<li><a href="" target="_blank">&lt;</a></li>
+							<li><a href="" target="_blank">1</a></li>
+							<li><a href="" target="_blank">2</a></li>
+							<li class="thisclass"><a href="" target="_blank">3</a></li>
+							<li><a href="" target="_blank">4</a></li>
+							<li style="background:none;"><a href="" target="_blank">...</a></li>
+							<li><a href="" target="_blank">50</a></li>
+							<li><a href="" target="_blank">&gt;</a></li>
+						</ul>
+
+						<div class="allfafang">
+							<input type="checkbox" name="checkbox8" id="checkbox8" />
+							<label for="checkbox8">全选</label>
+							<a href="">全部发放</a>
+						</div>
+					</div>
+					<!--分页End-->
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--尾部-->
+<div class="footerbg">
+	<div id="footer">
+		<!--右边-->
+		<div class="footer_R">
+			<dl>
+				<dt><img src="../images/weixin_da.png" /></dt>
+				<dd>
+					<p style="font-size:20px;">扫一扫关注</p>
+					<p><strong>微信公众号</strong></p>
+					<p class="ico_weixin">dsct88</p>
+				</dd>
+			</dl>		
+		</div>
+
+		<!--左边-->
+		<div class="footer_L">
+			<p>
+				<a href="">关于推广平台</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="">免责声明</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="">隐私声明</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="">联系方式</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="">意见反馈</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="">友情链接</a>
+			</p>
+			<p>©Copyright 2014 All Rights Reserved QianBaoMiMa.com</p>
+			<p>广ICP备12013288 号<img src="../images/pic.gif" /></p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
